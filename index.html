@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <script
+            src="https://kit.fontawesome.com/ccbd4d6bc1.js"
+            crossorigin="anonymous"
+        ></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+            integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+        <link rel="icon" href="favicon.png" type="image/x-icon" />
+        <link rel="stylesheet" href="style.css" />
+        <script type="text/javascript" src="bug-min.js"></script>
+        <title>Weather App || Sy Tu</title>
+    </head>
+    <body>
+        <div class="weather-app">
+            <!-- The video -->
+            <video autoplay muted loop id="myVideo" class="myVideo">
+                <source src="video/day/rainy.mp4" type="video/mp4" />
+            </video>
+            <div class="container">
+                <h3 class="brand">Today's Weather</h3>
+                <div>
+                    <!-- Showing temperature -->
+                    <div>
+                        <h1 class="temp">16&#176;</h1>
+                        <small class="temp-flex">
+                            <span class="tempC">&#176;C </span>
+                            <span>|</span>
+                            <span class="tempF">&#176;F</span>
+                        </small>
+                    </div>
+                    <!-- Showing city name -->
+                    <div class="city-time">
+                        <h1 class="name">London</h1>
+                        <small>
+                            <span class="time">07:02</span>
+                            - <span class="date">Monday Sep 19</span>
+                        </small>
+                    </div>
+                    <!-- Showing weather icon -->
+                    <div class="weather">
+                        <img
+                            src="./icons/day/113.png"
+                            class="icon"
+                            alt="icon"
+                            width="50"
+                            height="50"
+                        />
+                        <span class="condition">Cloudy</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Panel details -->
+            <div class="panel">
+                <form id="locationInput">
+                    <input
+                        type="text"
+                        class="search"
+                        placeholder="Enter Your Location"
+                    />
+                    <button type="submit" class="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+
+                <!-- Cities input -->
+                <ul class="cities">
+                    <li class="city">Sai Gon</li>
+                    <li class="city">TaiPei</li>
+                    <li class="city">Seattle</li>
+                    <li class="city">Aomori</li>
+                </ul>
+
+                <!-- Weather Details -->
+                <ul class="details">
+                    <h4>Weather Info</h4>
+                    <li>
+                        <small>
+                            <span class="material-symbols-outlined">
+                                cloud
+                            </span>
+                            Cloud
+                        </small>
+
+                        <span class="cloud">89%</span>
+                    </li>
+                    <li>
+                        <small>
+                            <span class="material-symbols-outlined">
+                                humidity_percentage
+                            </span>
+                            Humidity
+                        </small>
+                        <span class="humidity">64%</span>
+                    </li>
+                    <li>
+                        <small
+                            ><span class="material-symbols-outlined">air</span>
+                            Wind</small
+                        >
+
+                        <span class="wind">8km/h</span>
+                    </li>
+                </ul>
+
+                <!-- Quote -->
+                <p class="quote">"No Matter What You Do"</p>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <!-- Bugs effect -->
+        <script type="text/javascript">
+            // default fruit fly bug:
+            new BugController({ minBugs: 5, maxBugs: 8, mouseOver: "die" });
+        </script>
+    </body>
+</html>
