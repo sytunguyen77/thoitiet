@@ -19,7 +19,7 @@ const cities = document.querySelectorAll(".city");
 const video = document.querySelector(".myVideo");
 
 //Default city when the page loads
-let cityInput = "Houston";
+let cityInput = "New York";
 
 //Add click event to each city in the panel
 cities.forEach((city) => {
