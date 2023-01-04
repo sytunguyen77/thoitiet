@@ -164,6 +164,7 @@ the city name with template literals*/
       clear if the weather is clear*/
                 // app.style.backgroundImage = `url(./images/${timeOfDay}/clear.jpg)`;
                 video.src = `./video/${timeOfDay}/clear.mp4`;
+                /*Set quote based on weather condition*/
                 quote.innerHTML =
                     "“Just one small positive thought in the morning can change your whole day.”";
                 /*Change the button bg color
@@ -191,6 +192,7 @@ the city name with template literals*/
                 // app.style.backgroundImage = `url(./images/${timeOfDay}/cloudy.jpg)`;
                 video.src = `./video/${timeOfDay}/cloudy.mp4`;
                 btn.style.background = "#fa6d1b";
+                /*Set quote based on weather condition*/
                 quote.innerHTML =
                     "“Don't forget: beautiful sunsets need cloudy skies.”";
                 if (timeOfDay == "night") {
