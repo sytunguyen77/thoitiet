@@ -19,7 +19,7 @@ const cities = document.querySelectorAll(".city");
 const video = document.querySelector(".myVideo");
 
 //Default city when the page loads
-let cityInput = "New York";
+let cityInput = "Houston";
 
 //Add click event to each city in the panel
 cities.forEach((city) => {
@@ -108,6 +108,7 @@ the city name with template literals*/
                 changeTemp();
             });
 
+            /*Switching from Fahrenheit to Fahrenheit*/
             function changeTemp2() {
                 temp.innerHTML =
                     Math.round(data.current.temp_c) + "&#176" + "C";
@@ -147,7 +148,7 @@ the city name with template literals*/
             //Add the weather details to the page
             cloudOutput.innerHTML = data.current.cloud + "%";
             humidityOutput.innerHTML = data.current.humidity + "%";
-            windOutput.innerHTML = data.current.wind_kph + "km/h";
+            windOutput.innerHTML = data.current.wind_kph + " km/h";
 
             //Set default time of day
             let timeOfDay = "day";
@@ -231,7 +232,7 @@ the city name with template literals*/
                     quote.innerHTML =
                         "“Life’s not about waiting for the storm to pass…It’s about learning to dance in the rain.”";
                 }
-                /*And finnaly...Snow*/
+                /*And finally...Snow*/
             } else {
                 // app.style.backgroundImage = `url(./images/${timeOfDay}/snowy.jpg)`;
                 video.src = `./video/${timeOfDay}/snowy.mp4`;
@@ -250,7 +251,7 @@ the city name with template literals*/
         /*If the user types a city that doesn't exist,
   throw an alert*/
         .catch(() => {
-            alert("City not found, please try again");
+            alert(`${cityInput} isn't a valid city name. Please try again`);
             app.style.opacity = "1";
         });
 }
